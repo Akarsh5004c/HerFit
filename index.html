@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menstrual Tracker</title>
+  <style>
+  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylereset.css">
+</head>
+<body>
+  <header class="yfg">
+<h1>HerFit</h1>
+  </header>
+    <div class="login-container">
+  <h1>Menstrual Cycle Tracker</h1>
+  <center>
+  <div class="tracker">
+    <label for="lastPeriod">Date of Last Period:</label>
+    <input type="date" id="lastPeriod">
+    <br><br>
+    <label for="cycleLength">Average Cycle Length (days):</label>
+    <input type="number" id="cycleLength" min="1">
+    <br><br>
+    <button onclick="calculateNextPeriod()">Calculate Next Period</button>
+    <p id="result"></p>
+  </div>
+  </center>
+</div>
+  <script>
+    function calculateNextPeriod() {
+      const lastPeriodDate = new Date(document.getElementById("lastPeriod").value);
+      const cycleLength = parseInt(document.getElementById("cycleLength").value, 10);
+
+      if (!lastPeriodDate || !cycleLength) {
+        document.getElementById("result").textContent = "Please enter valid inputs.";
+        return;
+      }
+
+      const nextPeriodDate = new Date(lastPeriodDate);
+      nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength);
+
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("result").textContent =
+        "Your next period is expected to start on " + nextPeriodDate.toLocaleDateString(undefined, options) + ".";
+    }
+  </script>
+</body>
+</html>

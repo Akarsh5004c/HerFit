@@ -1,0 +1,97 @@
+body {
+  font-family: 'Dancing Script', cursive;
+  background-image: url('background.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    trandform: translateY(-20px);
+
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+.login-container {
+  background-color: rgba(255, 255, 255, 1.0); /* Semi-transparent white background */
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadein 1s ease-in-out 0.2s;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #dba1eb;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.input-group {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.input-group label {
+  
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #dba1eb;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #dba1eb;
+}
+
+.links {
+  margin-top: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

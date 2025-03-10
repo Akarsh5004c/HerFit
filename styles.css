@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+  
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url(menst.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+  }
+  .login-container{
+    
+    width: 360px;
+    height: 410px;
+    padding: 40px;
+    background-color: #e0cee6;
+    border-radius: 10px;
+      justify-content: center;  
+     border-width: 10px;
+     border-color: #80159d;
+     /* margin-right: 250px; */
+    align-items: center; */
+     text-align: center;
+     margin-top: 90px;
+     margin-left: 500px;
+     position: relative;
+     z-index: 1;
+}
+  h1 {
+    color: #bd6ed3;
+    justify-content: center;
+  }
+  .tracker {
+    margin-top: 20px;
+  }
+  label {
+    font-weight: bold;
+    display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  /* color: #333; */
+    /* background-color: white; */
+  }
+  input{
+    background-color: white;
+    text-align: center;
+    width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
+  
+   button { 
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #c491d2;
+    color: rgb(26, 21, 25);
+    border: #dba1eb;
+    border-width: 3px;
+    cursor: pointer;
+}
+      
+      button:active {
+        background-color: #cd65ba; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        transform: translateY(2px);
+      }
+      
+  button:hover {
+    background-color: #d742b2;
+  }
+.yfg{
+  width: 100%;
+    height: 100px;
+    padding: 30px;
+    width: 100%;
+    align-items: center;
+    color: white;
+    background-color: #dba1eb;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+}
+.yfg h1{
+    color: white;
+        /* text-align: left; */
+        font-family: 'Dancing Script', cursive;
+        font-size: 36px;
+        font-weight: 200;
+         margin-bottom: 35px;
+         /* justify-content: center; */
+         /* align-items: center; */
+         /* margin-top: 50px; */
+      
+}
+.login-container h1{
+    font-size: 25px;
+    font-weight: 100;
+    
+}
