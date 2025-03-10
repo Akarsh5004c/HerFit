@@ -1,49 +1,57 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Menstrual Tracker</title>
-  <style>
-  </style>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="stylereset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Health</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  
 </head>
 <body>
-  <header class="yfg">
-<h1>HerFit</h1>
-  </header>
-    <div class="login-container">
-  <h1>Menstrual Cycle Tracker</h1>
-  <center>
-  <div class="tracker">
-    <label for="lastPeriod">Date of Last Period:</label>
-    <input type="date" id="lastPeriod">
-    <br><br>
-    <label for="cycleLength">Average Cycle Length (days):</label>
-    <input type="number" id="cycleLength" min="1">
-    <br><br>
-    <button onclick="calculateNextPeriod()">Calculate Next Period</button>
-    <p id="result"></p>
-  </div>
-  </center>
-</div>
-  <script>
-    function calculateNextPeriod() {
-      const lastPeriodDate = new Date(document.getElementById("lastPeriod").value);
-      const cycleLength = parseInt(document.getElementById("cycleLength").value, 10);
+    <header>
+        <h1>HerFit</h1>
+        <nav>
+            <a href="login.html"><button>login</button></a>
+            <button onclick="openNav()">&#9776;</button>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="HerFit.html">Community</a>
+                <a href="index.html">Menstrual cycle tracker</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>Empowering Women's Health</h2>
+        <p>Your health, your choice, your well-being.</p>
+        <button>Learn More</button>
+    </section>
 
-      if (!lastPeriodDate || !cycleLength) {
-        document.getElementById("result").textContent = "Please enter valid inputs.";
-        return;
-      }
+    <section id="services" class="content-section">
+        <h2>Our Services</h2>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev" onclick="scrollCarousel(-1)">&#10094;</button>
+            <div class="services-container">
+                <div id="it1" class="service-item"><h2>Health Check-ups</h2></div>
+                <div id="it2" class="service-item"><h2>Mental Wellness Programs</h2></div>
+                <div id="it3" class="service-item"><h2>Nutrition & Diet Guidance</h2></div>
+                <div id="it4" class="service-item"><h2>Reproductive Health Services</h2></div>
+                <div id="it5"class="service-item"><h2>Fitness & Yoga</h2></div>
+            </div>
+            <button class="carousel-btn next" onclick="scrollCarousel(1)">&#10095;</button>
+        </div>
+    </section>
 
-      const nextPeriodDate = new Date(lastPeriodDate);
-      nextPeriodDate.setDate(nextPeriodDate.getDate() + cycleLength);
+    <section id="about" class="content-section">
+        <h2>About Us</h2>
+        <p>We provide trusted health information and resources for women.</p>
+    </section>
+    <button id="sosButton" class="sos-button">SOS</button>
+    <p id="status"></p>
 
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      document.getElementById("result").textContent =
-        "Your next period is expected to start on " + nextPeriodDate.toLocaleDateString(undefined, options) + ".";
-    }
-  </script>
+    <script src="java.js"></script>
 </body>
 </html>
